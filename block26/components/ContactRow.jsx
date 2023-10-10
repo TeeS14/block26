@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 
 export default function ContactRow({ contact, setSelectedContactId }) {
-  const [setContact, setSelectedContactId] = useState ("")
+  const [selectedContactId, setSelectedContactId] = useState(contact.id);
+  
   return (
     <tr
       onClick={() => {
-        setSelectedContactId(contact.id);
+        setSelectedContactId(selectedContactId);
       }}
     >
       <td>{contact.name}</td>
